@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>writenote</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+	rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+	href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
+	rel="stylesheet" />
+<link
+	href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
+	rel="stylesheet" />
+<link
+	href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
+	rel="stylesheet" />
+<link href="./resources/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm"
+		id="mainNav">
+		<div class="container px-5">
+			<a class="navbar-brand fw-bold" href="./index.jsp">MoneyWeb</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				Menu <i class="bi-list"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+					<li class="nav-item"><a class="nav-link me-lg-3"
+						href="./search.jsp">용돈 기록 조회</a></li>
+					<li class="nav-item"><a class="nav-link me-lg-3"
+						href="./writenote.html">수입 지출 기록</a></li>
+					<li class="nav-item"><a class="nav-link me-lg-3"
+						href="./confirmnote.jsp">기록 확정</a></li>
+					<li class="nav-item"><a class="nav-link me-lg-3"
+						href="./modenote.jsp">기록 변경 및 삭제</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="display-3">입력</h1>
+		</div>
+	</div>
+	<br>
+	<div class="container" align="center">
+		<div class="col-md-4 col-md-offset-4">
+			<h3>Insert</h3>
+			<br>
+			<form action="writenoteproc.jsp" method="post">
+			<div class="form-group">
+					<label>email</label> <br> <input type="text"
+						class="form-control" placeholder="email" name="email">
+				</div>
+				<br>
+				<div class="form-group">
+					<label>용돈</label> <br> <input type="text"
+						class="form-control" placeholder="money" name="money">
+				</div>
+				<br>
+				<div class="form-group row">
+					<div>
+						<input type="radio" name="in_out" value="in"> 수 입
+						 <input type="radio" name="in_out" value="out">지 출
+					</div>
+				</div>
+				<br>
+				<div class="form-group">
+					<label>내용</label> <br> <input type="text"
+						class="form-control" placeholder="note" name="note">
+				</div>
+				<br>
+				<div class="form-group">
+					<label for="inputPassword" class="sr-only">수입 지출 날짜</label> <br>
+					<br>
+					    <input type="text" name="yy" maxlength="4" placeholder="년" size="6">. 
+						<input type="text" name="mm" maxlength="4" placeholder="월" size="3">. 
+						<input type="text" name="dd" maxlength="4" placeholder="일" size="3">
+
+				</div>
+				<br>
+				<div class="form-group">
+					<label>memo</label> <br> <input type="text"
+						class="form-control" placeholder="memo" name="memo">
+				</div>
+				<br>
+				<div>
+					<button class="btn btn btn-lg btn-success btn-block" type="submit">확인</button>
+					<button class="btn btn btn-lg btn-secondary btn-block" type="reset">취소</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- Bootstrap core JS-->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Core theme JS-->
+	<script src="js/scripts.js"></script>
+</body>
+</html>
