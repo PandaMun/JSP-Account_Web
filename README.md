@@ -14,6 +14,8 @@ JSP를 공부하면서 만들었었던 웹 용돈 기입장입니다.
 
 그밖에 회원가입 페이지 , 용돈 관리 삭제 변경 페이지등을 만들었습니다.
 
+멤버 관리와 입출입내용은 데이터베이스에 저장하여 호출합니다.
+
 ```java
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -38,4 +40,4 @@ conn = DriverManager.getConnection(url, user, password);
 </html>
 ```
 
-dbconn.jsp 이라는 데이터베이스 연결 페이지로써 moneyweb db를 연결했습니다.
+데이터베이스 연결은 위와 같이  dbconn.jsp 이라는 데이터베이스 연결 페이지와 같은 방식으로 moneyweb db를 연결했습니다.
